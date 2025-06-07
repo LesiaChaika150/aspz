@@ -1,14 +1,12 @@
 #include <stdio.h>
 #include <stdint.h>
 
-// Функція для виводу числа у двійковому вигляді
 void print_binary(uint8_t val) {
     for (int i = 7; i >= 0; i--) {
         printf("%d", (val >> i) & 1);
     }
 }
 
-// Інверсія бітів у діапазоні [from_bit, to_bit]
 uint8_t invert_bits(uint8_t x, int from_bit, int to_bit) {
     uint8_t mask = 0;
 
