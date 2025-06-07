@@ -19,6 +19,6 @@
 ---
 
 ## **Результат роботи**
-![lab1_result_screenshot](./Результат.png)
+![pr1_result_screenshot](./Результат.png)
 
 
