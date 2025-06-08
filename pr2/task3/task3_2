@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int global_init = 42;       // data segment
+int global_uninit;          // bss segment
+
+void func() {}              // text segment
+
+int main() {
+    int local_var = 0;                  // stack
+    void *heap_ptr = malloc(1);        // heap
+
+    printf("Text segment (func):      %p\n", (void *)func);
+    printf("Initialized data:         %p\n", (void *)&global_init);
+    printf("Uninitialized data (BSS): %p\n", (void *)&global_uninit);
+    printf("Heap:                     %p\n", heap_ptr);
+    printf("Stack:                    %p\n", (void *)&local_var);
+
+    free(heap_ptr);
+    return 0;
+}
